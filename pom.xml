@@ -11,7 +11,7 @@
         <relativePath>../pegacorn</relativePath>
     </parent>
 
-    <artifactId>pegacorn-deployment-properties</artifactId>
+    <artifactId>pegacorn-deployment</artifactId>
     <packaging>jar</packaging>
 
     <name>Pegacorn :: Deployment Properties</name>
