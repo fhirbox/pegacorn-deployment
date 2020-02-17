@@ -51,6 +51,9 @@ public class CommunicateProperties {
     private static final String IRIS_COMMUNICATION_BUNDLE_PORT = "30101";
     private static final String IRIS_COMMUNICATION_BUNDLE_RESOURCE = "/fhir/r1/CommunicateBundle/";
 
+    private static final String IRIS_GROUP_BUNDLE_PORT = "30102";
+    private static final String IRIS_GROUP_BUNDLE_RESOURCE = "/fhir/r1/GroupBundle/";
+    
     private static final String TOPIC_RAW_COMM_TO_CARETEAM      = "jms:topic:pegacorn.FHIR.raw.CommunicationToACareTeam";
     private static final String TOPIC_RAW_COMM_TO_ENDPOINT      = "jms:topic:pegacorn.FHIR.raw.CommunicationToAEndPoint";
     private static final String TOPIC_RAW_COMM_TO_GROUP         = "jms:topic:pegacorn.FHIR.raw.CommunicationToAGroup";
@@ -86,6 +89,10 @@ public class CommunicateProperties {
     public String getIrisEndPointForIncomingCommunicationBundle() {
         return ("netty-http:http://" + siteCommonProperties.getPegacornCommunicateIrisHost() + ":" + IRIS_COMMUNICATION_BUNDLE_PORT + IRIS_COMMUNICATION_BUNDLE_RESOURCE);
     }    
+    
+    public String getIrisEndPointForIncomingGroupBundle() {
+        return ("netty-http:http://" + siteCommonProperties.getPegacornCommunicateIrisHost() + ":" + IRIS_GROUP_BUNDLE_PORT + IRIS_GROUP_BUNDLE_RESOURCE);
+    }       
     
     public String getIrisEndPointForRoomServerEvent() {
         return ("netty-http:http://" + siteCommonProperties.getPegacornCommunicateIrisHost() + ":" + RMSVR2IRIS_ENDPOINT_ON_IRIS_PORT + RMSVR2IRIS_ENDPOINT_ON_IRIS_RESOURCE);
