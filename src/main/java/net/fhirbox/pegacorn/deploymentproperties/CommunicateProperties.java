@@ -43,10 +43,13 @@ public class CommunicateProperties {
     // Site Details
     private static String ROOMSERVER_IDENTITY_PREFIX = "CHS";
 
-    private static final String IRIS_ENDPOINT_RESOURCE = "/transactions/{id}";
-    private static final String IRIS_ENDPOINT_PORT = "12001";
-    private static final String ROOM_SERVER_ENDPOINT_FOR_IRIS_EVENT = "netty-http:http://";
-    private static final String ROOM_SERVER_ENDPOINT_PORT_FOR_IRIS_EVENT = "40101";
+    private static final String RMSVR2IRIS_ENDPOINT_ON_IRIS_RESOURCE = "/transactions/{id}";
+    private static final String RMSVR2IRIS_ENDPOINT_ON_IRIS_PORT = "12001";
+    private static final String MSVR2IRIS_ENDPOINT_ON_RMSVR_CONNECTION = "netty-http:http://";
+    private static final String MSVR2IRIS_ENDPOINT_ON_RMSVR_PORT = "40101";
+    
+    private static final String IRIS_COMMUNICATION_BUNDLE_PORT = "30101";
+    private static final String IRIS_COMMUNICATION_BUNDLE_RESOURCE = "/fhir/r1/CommunicateBundle/";
 
     private static final String TOPIC_RAW_COMM_TO_CARETEAM      = "jms:topic:pegacorn.FHIR.raw.CommunicationToACareTeam";
     private static final String TOPIC_RAW_COMM_TO_ENDPOINT      = "jms:topic:pegacorn.FHIR.raw.CommunicationToAEndPoint";
@@ -80,12 +83,16 @@ public class CommunicateProperties {
         return (ROOMSERVER_IDENTITY_PREFIX);
     }
 
+    public String getIrisEndPointForIncomingCommunicationBundle() {
+        return ("netty-http:http://" + siteCommonProperties.getPegacornCommunicateIrisHost() + ":" + IRIS_COMMUNICATION_BUNDLE_PORT + IRIS_COMMUNICATION_BUNDLE_RESOURCE);
+    }    
+    
     public String getIrisEndPointForRoomServerEvent() {
-        return ("netty-http:http://" + siteCommonProperties.getPegacornCommunicateRoomServerHost() + ":" + IRIS_ENDPOINT_PORT + IRIS_ENDPOINT_RESOURCE);
+        return ("netty-http:http://" + siteCommonProperties.getPegacornCommunicateIrisHost() + ":" + RMSVR2IRIS_ENDPOINT_ON_IRIS_PORT + RMSVR2IRIS_ENDPOINT_ON_IRIS_RESOURCE);
     }
     
     public String getRoomServerEndPointForIrisEvent(){
-        return(ROOM_SERVER_ENDPOINT_FOR_IRIS_EVENT + siteCommonProperties.PEGACORN_COMMUNICATE_ROOMSERVER_HOST + ":" + ROOM_SERVER_ENDPOINT_PORT_FOR_IRIS_EVENT + "/");
+        return(MSVR2IRIS_ENDPOINT_ON_RMSVR_CONNECTION + siteCommonProperties.getPegacornCommunicateRoomServerHost() + ":" + MSVR2IRIS_ENDPOINT_ON_RMSVR_PORT + "/");
     }
 
     public String getRawCommunication2PractitionersTopic() {
