@@ -54,32 +54,32 @@ public class CommunicateProperties {
     private static final String IRIS_GROUP_BUNDLE_PORT = "30102";
     private static final String IRIS_GROUP_BUNDLE_RESOURCE = "/fhir/r1/GroupBundle/";
     
-    private static final String TOPIC_RAW_COMM_TO_CARETEAM      = "jms:topic:pegacorn.FHIR.raw.CommunicationToACareTeam";
-    private static final String TOPIC_RAW_COMM_TO_ENDPOINT      = "jms:topic:pegacorn.FHIR.raw.CommunicationToAEndPoint";
-    private static final String TOPIC_RAW_COMM_TO_GROUP         = "jms:topic:pegacorn.FHIR.raw.CommunicationToAGroup";
-    private static final String TOPIC_RAW_COMM_TO_ORGANIZATION  = "jms:topic:pegacorn.FHIR.raw.CommunicationToAnOrganization";
-    private static final String TOPIC_RAW_COMM_TO_PRACT         = "jms:topic:pegacorn.FHIR.raw.CommunicationToAPractitioner";
-    private static final String TOPIC_RAW_COM_TO_PRACTROLE      = "jms:topic:pegacorn.FHIR.raw.CommunicationToAPractitionerRole";
+    private static final String TOPIC_RAW_COMM_TO_CARETEAM      = "jms:topic:pegacorn.FHIR.message.raw.CommunicationToACareTeamBundle";
+    private static final String TOPIC_RAW_COMM_TO_ENDPOINT      = "jms:topic:pegacorn.FHIR.message.raw.CommunicationToAEndPointBundle";
+    private static final String TOPIC_RAW_COMM_TO_GROUP         = "jms:topic:pegacorn.FHIR.message.raw.CommunicationToAGroupBundle";
+    private static final String TOPIC_RAW_COMM_TO_ORGANIZATION  = "jms:topic:pegacorn.FHIR.message.raw.CommunicationToAnOrganizationBundle";
+    private static final String TOPIC_RAW_COMM_TO_PRACT         = "jms:topic:pegacorn.FHIR.message.raw.CommunicationToAPractitionerBundle";
+    private static final String TOPIC_RAW_COM_TO_PRACTROLE      = "jms:topic:pegacorn.FHIR.message.raw.CommunicationToAPractitionerRoleBundle";
 
-    private static final String TOPIC_RAW_CARETEAM          = "jms:topic:pegacorn.FHIR.raw.CareTeam";
-    private static final String TOPIC_RAW_COMMUNICATION     = "jms:topic:pegacorn.FHIR.raw.Communication";
-    private static final String TOPIC_RAW_ENDPOINT          = "jms:topic:pegacorn.FHIR.raw.EndPoint";
-    private static final String TOPIC_RAW_GROUP             = "jms:topic:pegacorn.FHIR.raw.Group";
-    private static final String TOPIC_RAW_LOCATION          = "jms:topic:pegacorn.FHIR.raw.Location";
-    private static final String TOPIC_RAW_ORGANIZATION      = "jms:topic:pegacorn.FHIR.raw.Organization";
-    private static final String TOPIC_RAW_PRACTITIONER      = "jms:topic:pegacorn.FHIR.raw.Practitioner";
-    private static final String TOPIC_RAW_PRACTITIONERROLE  = "jms:topic:pegacorn.FHIR.raw.PractitionerRole";
-    private static final String TOPIC_RAW_TASK              = "jms:topic:pegacorn.FHIR.raw.Task";
+    private static final String TOPIC_RAW_CARETEAM          = "jms:topic:pegacorn.FHIR.message.raw.CareTeamBundle";
+    private static final String TOPIC_RAW_COMMUNICATION     = "jms:topic:pegacorn.FHIR.message.raw.CommunicationBundle";
+    private static final String TOPIC_RAW_ENDPOINT          = "jms:topic:pegacorn.FHIR.message.raw.EndPointBundle";
+    private static final String TOPIC_RAW_GROUP             = "jms:topic:pegacorn.FHIR.message.raw.GroupBundle";
+    private static final String TOPIC_RAW_LOCATION          = "jms:topic:pegacorn.FHIR.message.raw.LocationBundle";
+    private static final String TOPIC_RAW_ORGANIZATION      = "jms:topic:pegacorn.FHIR.message.raw.OrganizationBundle";
+    private static final String TOPIC_RAW_PRACTITIONER      = "jms:topic:pegacorn.FHIR.message.raw.PractitionerBundle";
+    private static final String TOPIC_RAW_PRACTITIONERROLE  = "jms:topic:pegacorn.FHIR.message.raw.PractitionerRoleBundle";
+    private static final String TOPIC_RAW_TASK              = "jms:topic:pegacorn.FHIR.message.raw.TaskBundle";
     
-    private static final String TOPIC_NORMALISED_CARETEAM           = "jms:topic:pegacorn.FHIR.normalised.CareTeam";
-    private static final String TOPIC_NORMALISED_COMMUNICATION      = "jms:topic:pegacorn.FHIR.normalised.Communication";
-    private static final String TOPIC_NORMALISED_ENDPOINT           = "jms:topic:pegacorn.FHIR.normalised.EndPoint";
-    private static final String TOPIC_NORMALISED_GROUP              = "jms:topic:pegacorn.FHIR.normalised.Group";
-    private static final String TOPIC_NORMALISED_LOCATION           = "jms:topic:pegacorn.FHIR.normalised.Location";
-    private static final String TOPIC_NORMALISED_ORGANIZATION       = "jms:topic:pegacorn.FHIR.normalised.Organization";
-    private static final String TOPIC_NORMALISED_PRACTITIONER       = "jms:topic:pegacorn.FHIR.normalised.Practitioner";
-    private static final String TOPIC_NORMALISED_PRACTITIONERROLE   = "jms:topic:pegacorn.FHIR.normalised.PractitionerRole";
-    private static final String TOPIC_NORMALISED_TASK               = "jms:topic:pegacorn.FHIR.normalised.Task";
+    private static final String TOPIC_NORMALISED_CARETEAM           = "jms:topic:pegacorn.FHIR.message.normalised.CareTeamBundle";
+    private static final String TOPIC_NORMALISED_COMMUNICATION      = "jms:topic:pegacorn.FHIR.message.normalised.CommunicationBundle";
+    private static final String TOPIC_NORMALISED_ENDPOINT           = "jms:topic:pegacorn.FHIR.message.normalised.EndPointBundle";
+    private static final String TOPIC_NORMALISED_GROUP              = "jms:topic:pegacorn.FHIR.message.normalised.GroupBundle";
+    private static final String TOPIC_NORMALISED_LOCATION           = "jms:topic:pegacorn.FHIR.message.normalised.LocationBundle";
+    private static final String TOPIC_NORMALISED_ORGANIZATION       = "jms:topic:pegacorn.FHIR.message.normalised.OrganizationBundle";
+    private static final String TOPIC_NORMALISED_PRACTITIONER       = "jms:topic:pegacorn.FHIR.message.normalised.PractitionerBundle";
+    private static final String TOPIC_NORMALISED_PRACTITIONERROLE   = "jms:topic:pegacorn.FHIR.message.normalised.PractitionerRoleBundle";
+    private static final String TOPIC_NORMALISED_TASK               = "jms:topic:pegacorn.FHIR.message.normalised.TaskBundle";
 
 
     public String getRoomServerIdentityPrefix() {
