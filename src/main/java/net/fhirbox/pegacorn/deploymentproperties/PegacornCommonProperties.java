@@ -11,9 +11,9 @@ package net.fhirbox.pegacorn.deploymentproperties;
  */
 public class PegacornCommonProperties {
     
-    public final String PEGACORN_COMMUNICATE_IRIS_HOST = "10.111.111.1";
-    public final String PEGACORN_COMMUNICATE_ROOMSERVER_HOST = "10.111.111.101";
-    public final String PEGACORN_LADON_HOST =  "10.111.111.110";
+    public final String PEGACORN_COMMUNICATE_IRIS_HOST = "10.10.1.11";
+    public final String PEGACORN_COMMUNICATE_ROOMSERVER_HOST = "10.10.1.10";
+    public final String PEGACORN_LADON_HOST =  "10.10.10.1.20";
     
     public String getPegacornCommunicateIrisHost(){
         return(PEGACORN_COMMUNICATE_IRIS_HOST);
