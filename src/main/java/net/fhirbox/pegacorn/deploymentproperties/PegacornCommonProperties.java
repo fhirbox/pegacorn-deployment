@@ -5,15 +5,18 @@
  */
 package net.fhirbox.pegacorn.deploymentproperties;
 
+import javax.enterprise.context.ApplicationScoped;
+
 /**
  *
  * @author mhunter
  */
+@ApplicationScoped
 public class PegacornCommonProperties {
     
-    public final String PEGACORN_COMMUNICATE_IRIS_HOST = "10.10.1.11";
-    public final String PEGACORN_COMMUNICATE_ROOMSERVER_HOST = "10.10.1.10";
-    public final String PEGACORN_LADON_HOST =  "10.10.10.1.20";
+    private final String PEGACORN_COMMUNICATE_IRIS_HOST = "10.10.1.11";
+    private final String PEGACORN_COMMUNICATE_ROOMSERVER_HOST = "10.10.1.10";
+    private final String PEGACORN_LADON_HOST =  "10.10.10.1.20";
     
     public String getPegacornCommunicateIrisHost(){
         return(PEGACORN_COMMUNICATE_IRIS_HOST);

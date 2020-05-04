@@ -5,6 +5,9 @@
  */
 package net.fhirbox.pegacorn.deploymentproperties;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
 /*
  * The following (JMS) queues need to be added to the Wildfly configuration 
     <jms-queue name="FHIR.Message.Raw.CommunicationBundle" entries="jms:topic:pegacorn.FHIR.message.raw.CommunicationBundle"/>
@@ -36,9 +39,12 @@ package net.fhirbox.pegacorn.deploymentproperties;
  *
  * @author Mark A. Hunter (ACT Health)
  */
+
+@ApplicationScoped
 public class CommunicateProperties {
     
-    public PegacornCommonProperties siteCommonProperties = new PegacornCommonProperties();
+    @Inject
+    PegacornCommonProperties siteCommonProperties;
 
     // Site Details
     private static String ROOMSERVER_IDENTITY_PREFIX = "CHS";
